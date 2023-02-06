@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+:root {
+  --background: #fff;
+  --yellow: #fbffa7;
+  --orange: #ff764d;
+  --light-blue: #b1c5ff;
+  --pink: #caa1ff;
+  --green: #b6ffc0;
+  --violet: #8282ff;
+  --font-color: #232526;
+}
+body {
+  background: var(--green);
+  font-family:'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+  color: var(--font-color);
+}
+
+/* NAVBAR */
+#navbar {
+  background-color: var(--background);
+  width: 80%;
+  margin: 20px auto;
+  padding: 4px 18px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.10);
+  transition: all 2s ease;
+  animation: moveToDown 2s ease;
+}
+#navbar ul {
+  display: flex;
+  justify-content: end;
+  margin: 6px 12px;
+}
+#navbar ul li {
+  list-style-type: none;
+}
+
+#navbar ul li a {
+  display: block;
+  color: var(--violet);
+  text-decoration: none;
+  margin: 2px 5px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  text-align: center;
+}
+#navbar ul li a:hover {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+/* WELCOME SECTION */
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    var(--green),
+    var(--light-blue) 50%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+#welcome-section div h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+/* PROJECTS */
+#projects  {
+  width: 100%;
+  height: 115vh;
+  background: linear-gradient(
+    var(--light-blue),
+    var(--pink) 40%,
+    var(--pink) 100%
+  );
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#projects h2 {
+  color: #fefefe;
+  font-size: 30px;
+  font-weight:600;
+  margin: 25px 0;
+}
+@media (min-width: 600px){
+  #these-are {
+    text-transform: lowercase;
+  }
+  #these-are::before {
+    content: "These are ";
+  }
+  #these-are::first-letter {
+    text-transform: capitalize;
+  }
+}
+/* PERSONALIZE EACH PROJECT */
+#container-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; 
+  justify-content: center;
+  gap: 10px;
+}
+#project-tile {
+  border: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#all-projects {
+  margin: 30px;
+  margin-bottom: 100px;
+}
+#all-projects a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 120px;
+  padding: 5px 10px;
+  border: 1px solid rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.img-project {
+  width: 300px
+}
+
+/* FOOTER */
+#footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #555555;
+  box-shadow: 0 -1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+#footer a {
+  text-decoration: none;
+  color: #111111;
+  text-align: center;
+}
+#ft-columns {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 40px 0 20px;
+}
+#ft-columns div {
+  display: flex;
+  flex-direction: column;
+}
+#ft-columns h2 {
+  color: #fefefe;
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+#ft-columns input{
+  margin-top: 15px;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  background-color: rgba(254, 254, 254, 0.9);
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+#footer hr {
+  margin: 15px 10% 0;
+  border-color: rgba(0, 0, 0, 0.10);
+}
+#ft-social-media {
+  margin: 10px auto;
+}
+#ft-social-media a {
+  display: inline-block;
+  font-size: 20px;
+  color: var(--font-color);
+  margin: 0 5px;
+}
+
+@media (max-width: 520px) {
+  #navbar ul {
+    justify-content: center;
+  }
+  #footer h2 {
+    font-size: 23px;
+  }
+  #ft-columns a {
+    font-size: 15px
+  }
+}
+
+
+@keyframes moveToDown {
+  0% {
+    margin: 0 auto;
+    top: -50px;
+  }
+  25% {
+    top: -20px;
+  }
+  50% {
+    top: -5px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 20px;
+  }
+}
